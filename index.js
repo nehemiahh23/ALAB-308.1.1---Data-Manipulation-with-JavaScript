@@ -36,20 +36,26 @@ const isValid = isSum50 && isTwoOdd && isUnder25 && isUnique;
 // console.log(isValid);
 
 // Created array of all numbers
-const nums = [n1, n2, n3, n4]
+const nums = [n1, n2, n3, n4];
 
 // Check if all numbers are divisible by 5. Cache the result in a variable.
 let isMult5 = true;
 nums.forEach(num => num % 5 === 0 ? null : isMult5 = false);
+console.log(`All nums are multiples of 5: ${isMult5}`)
 
 // Check if the first number is larger than the last. Cache the result in a variable.
-const firstGreater = nums[0] > nums[3]
+const firstGreater = nums[0] > nums[3];
+console.log(`num1 is greater than num4: ${firstGreater}`)
 
 // Subtract the first number from the second number.
-let chainResult = nums[1] - nums[0]
+let chainResult = nums[1] - nums[0];
+console.log(`num2 minus num1: ${chainResult}`)
 
 // Multiply the result by the third number.
-chainResult *= nums[2]
+chainResult *= nums[2];
+console.log(`Above result times num3: ${chainResult}`)
 
 // Find the remainder of dividing the result by the fourth number.
-chainResult %= nums[3]
+chainResult %= nums[3];
+console.log(`Remainder of num4 divided by above result: ${chainResult}`)
+
