@@ -44,3 +44,12 @@ nums.forEach(num => num % 5 === 0 ? null : isMult5 = false);
 
 // Check if the first number is larger than the last. Cache the result in a variable.
 const firstGreater = nums[0] > nums[3]
+
+// Subtract the first number from the second number.
+let chainResult = nums[1] - nums[0]
+
+// Multiply the result by the third number.
+chainResult *= nums[2]
+
+// Find the remainder of dividing the result by the fourth number.
+chainResult %= nums[3]
