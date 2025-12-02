@@ -4,9 +4,6 @@ const n2 = 15;
 const n3 = 20;
 const n4 = 5;
 
-// Created array of all numbers
-const nums = [n1, n2, n3, n4]
-
 // Check one: add up to 50
 // This is a fairly simple operation using
 // arithmetic operators and a comparison.
@@ -38,7 +35,12 @@ const isValid = isSum50 && isTwoOdd && !isOver25 && isUnique;
 // Finally, log the results.
 // console.log(isValid);
 
+// Created array of all numbers
+const nums = [n1, n2, n3, n4]
+
 // Check if all numbers are divisible by 5. Cache the result in a variable.
 let isMult5 = true;
 nums.forEach(num => num % 5 === 0 ? null : isMult5 = false);
 
+// Check if the first number is larger than the last. Cache the result in a variable.
+const firstGreater = nums[0] > nums[3]
