@@ -59,3 +59,35 @@ console.log(`Above result times num3: ${chainResult}`)
 chainResult %= nums[3];
 console.log(`Remainder of num4 divided by above result: ${chainResult}`)
 
+
+// total distance 1500mi
+// 55 mph = 30mpg
+// 60 mph = 28mpg
+// 75 mph = 23mpg
+// budget = $175
+// cost = $3/gal
+
+
+function tripCalc(s) {
+	if (s !== 55 && s !== 60 && s !== 75) {
+		console.log("Invalid speed input.")
+		return
+	}
+	
+	const mpg = 
+	s === 55 ? 30 
+	: s === 60 ? 28
+	: s === 75 ? 23
+	: null
+
+	const fuelReq = 1500 / mpg;
+	const cost = fuelReq * 3;
+	const time = 1500 / s;
+	
+	console.log(`Your trip will consume ${fuelReq} gallons of gas. This will cost $${cost} ${cost > 175 ? "(Over Budget!)" : ""}. The drive will take about ${time} hours.`)
+
+}
+
+tripCalc(55)
+tripCalc(60)
+tripCalc(75)
