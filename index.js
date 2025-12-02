@@ -4,6 +4,9 @@ const n2 = 15;
 const n3 = 20;
 const n4 = 5;
 
+// Created array of all numbers
+const nums = [n1, n2, n3, n4]
+
 // Check one: add up to 50
 // This is a fairly simple operation using
 // arithmetic operators and a comparison.
@@ -33,13 +36,9 @@ const isUnique = n1 != n2 && n1 != n3 && n1 != n4 && n2 != n3 && n2 != n4 && n3 
 const isValid = isSum50 && isTwoOdd && !isOver25 && isUnique;
 
 // Finally, log the results.
-console.log(isValid);
+// console.log(isValid);
 
-// Here's another example of how this COULD be done,
-// but it SHOULD NOT be done this way. As programmers,
-// we break things into small, manageable pieces so that
-// they can be better understood, scaled, and maintained.
-const dontDoThis = ((n1 + n2 + n3 + n4) == 50) && 
-  ((n1 % 2) + (n2 % 2) + (n3 % 2) + (n4 % 2) >= 2) && 
-  !(n1 > 25 || n2 > 25 || n3 > 25 || n4 > 25) && 
-  (n1 != n2 && n1 != n3 && n1 != n4 && n2 != n3 && n2 != n4 && n3 != n4);
+// Check if all numbers are divisible by 5. Cache the result in a variable.
+let isMult5 = true;
+nums.forEach(num => num % 5 === 0 ? null : isMult5 = false);
+
